@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Divisible</title>
+    </head>
+    <body>
+        <script>
+            function calcDivisible(param) {
+                var array = [];
+                for (i = 1; i <= param; i++) {
+                    if (i % 2 == 0 && i % 3 == 0) {
+                        array.push("yu-gi");
+                    }
+                    else if (i % 2 == 0 && i % 5 == 0) {
+                        array.push("yu-oh");
+                    }
+                    else if (i % 3 == 0 && i % 5 == 0) {
+                        array.push("gi-oh");
+                    }
+                    else if (i % 2 == 0) {
+                        array.push("yu");
+                    }
+                    else if (i % 3 == 0) {
+                        array.push("gi");
+                    }
+                    else if (i % 5 == 0) {
+                        array.push("oh")
+                    }
+                    else {
+                        array.push(i)
+                    }
+                }
+                console.log(array);
+            }
+            calcDivisible(100);
+            calcDivisible(23);
+        </script>
+    </body>
+</html>    
